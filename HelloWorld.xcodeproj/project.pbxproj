@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131FBAD215C1709000D9BB81 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131FBAD115C1709000D9BB81 /* GHUnitIOS.framework */; };
 		83CCE8BF15BFD66C00D7D820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8BE15BFD66C00D7D820 /* UIKit.framework */; };
 		83CCE8C115BFD66C00D7D820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C015BFD66C00D7D820 /* Foundation.framework */; };
 		83CCE8C315BFD66C00D7D820 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C215BFD66C00D7D820 /* CoreGraphics.framework */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131FBAD115C1709000D9BB81 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		83CCE8BA15BFD66C00D7D820 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CCE8BE15BFD66C00D7D820 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83CCE8C015BFD66C00D7D820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -41,6 +43,7 @@
 				83CCE8BF15BFD66C00D7D820 /* UIKit.framework in Frameworks */,
 				83CCE8C115BFD66C00D7D820 /* Foundation.framework in Frameworks */,
 				83CCE8C315BFD66C00D7D820 /* CoreGraphics.framework in Frameworks */,
+				131FBAD215C1709000D9BB81 /* GHUnitIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +70,7 @@
 		83CCE8BD15BFD66C00D7D820 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				131FBAD115C1709000D9BB81 /* GHUnitIOS.framework */,
 				83CCE8BE15BFD66C00D7D820 /* UIKit.framework */,
 				83CCE8C015BFD66C00D7D820 /* Foundation.framework */,
 				83CCE8C215BFD66C00D7D820 /* CoreGraphics.framework */,
@@ -237,6 +241,10 @@
 		83CCE8D915BFD66C00D7D820 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
@@ -248,6 +256,10 @@
 		83CCE8DA15BFD66C00D7D820 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
@@ -275,6 +287,7 @@
 				83CCE8DA15BFD66C00D7D820 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
