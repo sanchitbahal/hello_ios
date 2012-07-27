@@ -7,6 +7,7 @@
 //
 
 #import "HelloWorldViewController.h"
+#import "HelloWorld.h"
 
 @interface HelloWorldViewController ()
 
@@ -41,11 +42,10 @@
     
     NSString *nameString = self.userName;
     if ([nameString length] == 0) {
-        nameString = @"World";
+        self.label.text = [HelloWorld getGreeting];
+    } else {
+        self.label.text = [HelloWorld getGreeting:nameString];
     }
-    
-    NSString *greeting = [[NSString alloc] initWithFormat:@"Hello %@!", nameString];
-    self.label.text = greeting;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
