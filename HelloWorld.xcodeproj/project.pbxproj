@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		131FBAD215C1709000D9BB81 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131FBAD115C1709000D9BB81 /* GHUnitIOS.framework */; };
+		131FBB5315C26D9F00D9BB81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8BE15BFD66C00D7D820 /* UIKit.framework */; };
+		131FBB5415C26D9F00D9BB81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C015BFD66C00D7D820 /* Foundation.framework */; };
+		131FBB5515C26D9F00D9BB81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C215BFD66C00D7D820 /* CoreGraphics.framework */; };
+		131FBB5B15C26D9F00D9BB81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 131FBB5915C26D9F00D9BB81 /* InfoPlist.strings */; };
+		131FBB5D15C26D9F00D9BB81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 131FBB5C15C26D9F00D9BB81 /* main.m */; };
+		131FBB6515C26DAE00D9BB81 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131FBAD115C1709000D9BB81 /* GHUnitIOS.framework */; };
+		131FBB6D15C26EED00D9BB81 /* HelloWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 131FBB6C15C26EED00D9BB81 /* HelloWorld.m */; };
 		83CCE8BF15BFD66C00D7D820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8BE15BFD66C00D7D820 /* UIKit.framework */; };
 		83CCE8C115BFD66C00D7D820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C015BFD66C00D7D820 /* Foundation.framework */; };
 		83CCE8C315BFD66C00D7D820 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C215BFD66C00D7D820 /* CoreGraphics.framework */; };
@@ -20,6 +27,12 @@
 
 /* Begin PBXFileReference section */
 		131FBAD115C1709000D9BB81 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
+		131FBB5115C26D9E00D9BB81 /* tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		131FBB5815C26D9F00D9BB81 /* tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tests-Info.plist"; sourceTree = "<group>"; };
+		131FBB5A15C26D9F00D9BB81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		131FBB5C15C26D9F00D9BB81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		131FBB5E15C26D9F00D9BB81 /* tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tests-Prefix.pch"; sourceTree = "<group>"; };
+		131FBB6C15C26EED00D9BB81 /* HelloWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloWorld.m; sourceTree = "<group>"; };
 		83CCE8BA15BFD66C00D7D820 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CCE8BE15BFD66C00D7D820 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83CCE8C015BFD66C00D7D820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,6 +49,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		131FBB4E15C26D9E00D9BB81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131FBB6515C26DAE00D9BB81 /* GHUnitIOS.framework in Frameworks */,
+				131FBB5315C26D9F00D9BB81 /* UIKit.framework in Frameworks */,
+				131FBB5415C26D9F00D9BB81 /* Foundation.framework in Frameworks */,
+				131FBB5515C26D9F00D9BB81 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83CCE8B715BFD66C00D7D820 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,10 +74,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131FBB5615C26D9F00D9BB81 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				131FBB5715C26D9F00D9BB81 /* Supporting Files */,
+				131FBB6C15C26EED00D9BB81 /* HelloWorld.m */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		131FBB5715C26D9F00D9BB81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				131FBB5815C26D9F00D9BB81 /* tests-Info.plist */,
+				131FBB5915C26D9F00D9BB81 /* InfoPlist.strings */,
+				131FBB5C15C26D9F00D9BB81 /* main.m */,
+				131FBB5E15C26D9F00D9BB81 /* tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		83CCE8AF15BFD66C00D7D820 = {
 			isa = PBXGroup;
 			children = (
 				83CCE8C415BFD66C00D7D820 /* HelloWorld */,
+				131FBB5615C26D9F00D9BB81 /* tests */,
 				83CCE8BD15BFD66C00D7D820 /* Frameworks */,
 				83CCE8BB15BFD66C00D7D820 /* Products */,
 			);
@@ -63,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				83CCE8BA15BFD66C00D7D820 /* HelloWorld.app */,
+				131FBB5115C26D9E00D9BB81 /* tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +151,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		131FBB5015C26D9E00D9BB81 /* tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 131FBB6215C26D9F00D9BB81 /* Build configuration list for PBXNativeTarget "tests" */;
+			buildPhases = (
+				131FBB4D15C26D9E00D9BB81 /* Sources */,
+				131FBB4E15C26D9E00D9BB81 /* Frameworks */,
+				131FBB4F15C26D9E00D9BB81 /* Resources */,
+				131FBB6F15C2711F00D9BB81 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tests;
+			productName = tests;
+			productReference = 131FBB5115C26D9E00D9BB81 /* tests.app */;
+			productType = "com.apple.product-type.application";
+		};
 		83CCE8B915BFD66C00D7D820 /* HelloWorld */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83CCE8D815BFD66C00D7D820 /* Build configuration list for PBXNativeTarget "HelloWorld" */;
@@ -144,11 +208,20 @@
 			projectRoot = "";
 			targets = (
 				83CCE8B915BFD66C00D7D820 /* HelloWorld */,
+				131FBB5015C26D9E00D9BB81 /* tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		131FBB4F15C26D9E00D9BB81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131FBB5B15C26D9F00D9BB81 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83CCE8B815BFD66C00D7D820 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -160,7 +233,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		131FBB6F15C2711F00D9BB81 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh RunTests.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		131FBB4D15C26D9E00D9BB81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131FBB5D15C26D9F00D9BB81 /* main.m in Sources */,
+				131FBB6D15C26EED00D9BB81 /* HelloWorld.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83CCE8B615BFD66C00D7D820 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +272,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		131FBB5915C26D9F00D9BB81 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				131FBB5A15C26D9F00D9BB81 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		83CCE8C715BFD66C00D7D820 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -193,6 +299,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		131FBB6315C26D9F00D9BB81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tests/tests-Prefix.pch";
+				INFOPLIST_FILE = "tests/tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		131FBB6415C26D9F00D9BB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tests/tests-Prefix.pch";
+				INFOPLIST_FILE = "tests/tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		83CCE8D615BFD66C00D7D820 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -271,6 +415,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		131FBB6215C26D9F00D9BB81 /* Build configuration list for PBXNativeTarget "tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131FBB6315C26D9F00D9BB81 /* Debug */,
+				131FBB6415C26D9F00D9BB81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		83CCE8B415BFD66C00D7D820 /* Build configuration list for PBXProject "HelloWorld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
