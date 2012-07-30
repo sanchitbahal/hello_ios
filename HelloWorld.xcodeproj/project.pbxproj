@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		131FBAD115C1709000D9BB81 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
-		131FBB5115C26D9E00D9BB81 /* tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = tests.app; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		131FBB5115C26D9E00D9BB81 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		131FBB5815C26D9F00D9BB81 /* tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tests-Info.plist"; sourceTree = "<group>"; };
 		131FBB5A15C26D9F00D9BB81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		131FBB5C15C26D9F00D9BB81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,13 +86,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		131FBB5615C26D9F00D9BB81 /* Tests */ = {
+		131FBB5615C26D9F00D9BB81 /* tests */ = {
 			isa = PBXGroup;
 			children = (
 				131FBB5715C26D9F00D9BB81 /* Supporting Files */,
 				131FBB6C15C26EED00D9BB81 /* HelloWorldTest.m */,
 			);
-			name = Tests;
 			path = tests;
 			sourceTree = "<group>";
 		};
@@ -111,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				83CCE8C415BFD66C00D7D820 /* HelloWorld */,
-				131FBB5615C26D9F00D9BB81 /* Tests */,
+				131FBB5615C26D9F00D9BB81 /* tests */,
 				83CCE8BD15BFD66C00D7D820 /* Frameworks */,
 				83CCE8BB15BFD66C00D7D820 /* Products */,
 			);
@@ -121,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				83CCE8BA15BFD66C00D7D820 /* HelloWorld.app */,
-				131FBB5115C26D9E00D9BB81 /* tests.app */,
+				131FBB5115C26D9E00D9BB81 /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,9 +165,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		131FBB5015C26D9E00D9BB81 /* Tests */ = {
+		131FBB5015C26D9E00D9BB81 /* tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 131FBB6215C26D9F00D9BB81 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildConfigurationList = 131FBB6215C26D9F00D9BB81 /* Build configuration list for PBXNativeTarget "tests" */;
 			buildPhases = (
 				131FBB4D15C26D9E00D9BB81 /* Sources */,
 				131FBB4E15C26D9E00D9BB81 /* Frameworks */,
@@ -180,9 +179,9 @@
 			dependencies = (
 				131FBB8C15C2952C00D9BB81 /* PBXTargetDependency */,
 			);
-			name = Tests;
+			name = tests;
 			productName = tests;
-			productReference = 131FBB5115C26D9E00D9BB81 /* tests.app */;
+			productReference = 131FBB5115C26D9E00D9BB81 /* Tests.app */;
 			productType = "com.apple.product-type.application";
 		};
 		83CCE8B915BFD66C00D7D820 /* HelloWorld */ = {
@@ -224,7 +223,7 @@
 			projectRoot = "";
 			targets = (
 				83CCE8B915BFD66C00D7D820 /* HelloWorld */,
-				131FBB5015C26D9E00D9BB81 /* Tests */,
+				131FBB5015C26D9E00D9BB81 /* tests */,
 			);
 		};
 /* End PBXProject section */
@@ -445,7 +444,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		131FBB6215C26D9F00D9BB81 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+		131FBB6215C26D9F00D9BB81 /* Build configuration list for PBXNativeTarget "tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				131FBB6315C26D9F00D9BB81 /* Debug */,
