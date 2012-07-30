@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		131FBAD215C1709000D9BB81 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 131FBAD115C1709000D9BB81 /* GHUnitIOS.framework */; };
 		131FBB5315C26D9F00D9BB81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8BE15BFD66C00D7D820 /* UIKit.framework */; };
 		131FBB5415C26D9F00D9BB81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C015BFD66C00D7D820 /* Foundation.framework */; };
 		131FBB5515C26D9F00D9BB81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C215BFD66C00D7D820 /* CoreGraphics.framework */; };
@@ -81,7 +80,6 @@
 				83CCE8BF15BFD66C00D7D820 /* UIKit.framework in Frameworks */,
 				83CCE8C115BFD66C00D7D820 /* Foundation.framework in Frameworks */,
 				83CCE8C315BFD66C00D7D820 /* CoreGraphics.framework in Frameworks */,
-				131FBAD215C1709000D9BB81 /* GHUnitIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,9 +165,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		131FBB5015C26D9E00D9BB81 /* tests */ = {
+		131FBB5015C26D9E00D9BB81 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 131FBB6215C26D9F00D9BB81 /* Build configuration list for PBXNativeTarget "tests" */;
+			buildConfigurationList = 131FBB6215C26D9F00D9BB81 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				131FBB4D15C26D9E00D9BB81 /* Sources */,
 				131FBB4E15C26D9E00D9BB81 /* Frameworks */,
@@ -181,7 +179,7 @@
 			dependencies = (
 				131FBB8C15C2952C00D9BB81 /* PBXTargetDependency */,
 			);
-			name = tests;
+			name = Tests;
 			productName = tests;
 			productReference = 131FBB5115C26D9E00D9BB81 /* tests.app */;
 			productType = "com.apple.product-type.application";
@@ -225,7 +223,7 @@
 			projectRoot = "";
 			targets = (
 				83CCE8B915BFD66C00D7D820 /* HelloWorld */,
-				131FBB5015C26D9E00D9BB81 /* tests */,
+				131FBB5015C26D9E00D9BB81 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -446,7 +444,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		131FBB6215C26D9F00D9BB81 /* Build configuration list for PBXNativeTarget "tests" */ = {
+		131FBB6215C26D9F00D9BB81 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				131FBB6315C26D9F00D9BB81 /* Debug */,
