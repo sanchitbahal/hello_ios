@@ -7,24 +7,77 @@
 //
 
 #import "MediaPlayerViewController.h"
+@interface MediaPlayerViewController ()
+    - (void) initializeMoviePlayer;
+    - (NSString*) getDocumentDirectory;
+    - (void) playFirstMovie:(NSArray*) fileList fromDirectory: (NSString*) dirPath;
+    - (void) playMovie:(NSURL*) movieURL;
+    - (void) writeToFile;
+@end
 
 @implementation MediaPlayerViewController
-@synthesize myView, moviePlayer;
-- (void) viewDidLoad
-{
-//    NSURL* movieURL = [[NSURL alloc] initWithString: @"http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8"]; 
-    NSURL* movieURL = [[NSURL alloc] initWithString: @"file:///Users/manish/iOS/Sample%20Projects/SampleVideoStreamApp/SampleVideoStreamApp/sample.m4v"];
-    moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL: movieURL];
-    [moviePlayer prepareToPlay];
-    [moviePlayer.view setFrame:self.view.bounds];
-    [self.myView addSubview:moviePlayer.view];
-    [moviePlayer play];     
-}
+    @synthesize movieView, moviePlayer;
 
-- (void) viewDidUnload
-{
-    
+    - (void) initializeMoviePlayer
+    {
+        moviePlayer = [[MPMoviePlayerController alloc] init];
+        [moviePlayer prepareToPlay];
+        [moviePlayer.view setFrame:self.view.bounds];
+        [self.movieView addSubview:moviePlayer.view];
+    }
 
-}
+    - (NSString*) getDocumentDirectory
+    {
+        NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString* documentDirectory = [paths objectAtIndex:0];
+        return documentDirectory;
+    }
 
+    - (void) playFirstMovie:(NSArray*) fileList fromDirectory: (NSString*) dirPath
+    {
+        for (NSString* file in fileList) {
+            NSLog(@"++++++++++++++++++++++%@",file);
+            if([file hasSuffix:@".m4v"]) 
+            {
+                NSString* absolutePath = [NSString stringWithFormat:@"%@/%@",dirPath,file];
+                NSURL* fileURL = [[NSURL alloc] initFileURLWithPath:absolutePath];
+                [self playMovie:fileURL];
+            }
+        }    
+    }
+
+
+    - (void) playMovie:(NSURL*) movieURL
+    {
+        [moviePlayer setContentURL:movieURL];
+        [moviePlayer play];     
+    }
+
+    - (void) viewDidLoad
+    {
+        NSFileManager* fm = [NSFileManager defaultManager];
+        NSString* documentDirectory = [self getDocumentDirectory];
+        NSArray* files = [fm contentsOfDirectoryAtPath:documentDirectory error:NULL];
+        [self initializeMoviePlayer];
+        [self playFirstMovie:files fromDirectory:documentDirectory];
+    }
+
+    - (void) viewDidUnload
+    {
+        [super viewDidUnload];
+    }
+
+
+    - (void) writeToFile 
+    {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        //make a file name to write the data to using the documents directory:
+        NSString *fileName = [NSString stringWithFormat:@"%@//textfile.txt",documentsDirectory];
+        //create content - four lines of text
+        NSString *content = @"One\nTwo\nThree\nFour\nFive";
+        //save content to the documents directory
+        [content writeToFile:fileName atomically:NO encoding:NSStringEncodingConversionAllowLossy error:nil];
+        NSLog(@"************************%@",documentsDirectory);    
+    }
 @end

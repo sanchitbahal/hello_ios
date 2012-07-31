@@ -68,34 +68,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="myView" destination="IAp-F7-JVo" id="GIc-2V-76S"/>
+                        <outlet property="movieView" destination="IAp-F7-JVo" id="XBu-sp-b8C"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="634" y="87"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="HelloWorldViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HelloWorldViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changeGreeting:"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MPMoviePlayerController" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MPMoviePlayerController.h"/>
-        </class>
-        <class className="MediaPlayerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MediaPlayerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loadPlayer:"/>
-                <relationship kind="outlet" name="moviePlayer" candidateClass="MPMoviePlayerController"/>
-                <relationship kind="outlet" name="myView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

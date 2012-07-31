@@ -11,6 +11,5 @@
 
 @interface MediaPlayerViewController : UIViewController
 @property (nonatomic, retain) IBOutlet MPMoviePlayerController* moviePlayer;
-@property (nonatomic,retain) IBOutlet UIView *myView; 
-- (IBAction) loadPlayer:(id) sender;
+@property (nonatomic,retain) IBOutlet UIView *movieView; 
 @end
