@@ -10,6 +10,13 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface MediaPlayerViewController : UIViewController
+
 @property (nonatomic, retain) IBOutlet MPMoviePlayerController* moviePlayer;
-@property (nonatomic,retain) IBOutlet UIView *movieView; 
+@property (nonatomic,retain) IBOutlet UIView *movieView;
+
+- (void) initializeMoviePlayer;
+- (NSString*) getDocumentDirectory;
+- (void) playFirstMovie:(NSArray*) fileList fromDirectory: (NSString*) dirPath;
+- (void) playMovie:(NSURL*) movieURL;
+- (void) writeToFile;
 @end
