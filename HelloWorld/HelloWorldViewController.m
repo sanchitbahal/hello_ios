@@ -9,6 +9,10 @@
 #import "HelloWorldViewController.h"
 #import "HelloWorld.h"
 
+@interface HelloWorldViewController ()
+
+@end
+
 @implementation HelloWorldViewController
 @synthesize textField;
 @synthesize label;

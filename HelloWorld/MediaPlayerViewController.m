@@ -7,6 +7,13 @@
 //
 
 #import "MediaPlayerViewController.h"
+@interface MediaPlayerViewController ()
+    - (void) initializeMoviePlayer;
+    - (NSString*) getDocumentDirectory;
+    - (void) playFirstMovie:(NSArray*) fileList fromDirectory: (NSString*) dirPath;
+    - (void) playMovie:(NSURL*) movieURL;
+    - (void) writeToFile;
+@end
 
 @implementation MediaPlayerViewController
     @synthesize movieView, moviePlayer;
