@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "FileUtil.h"
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -41,12 +42,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
-    
-    NSFileManager *fm = [NSFileManager defaultManager];
-    NSString *documentDirectory = [self getDocumentDirectory];
-    NSArray *files = [fm contentsOfDirectoryAtPath:documentDirectory error:NULL];
+
     [self initializeMoviePlayer];
-    [self playFirstMovie:files fromDirectory:documentDirectory];
+    [self playFirstMovie:[FileUtil getFileList]];
 }
 
 - (void)viewDidUnload
@@ -61,7 +59,7 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (void) initializeMoviePlayer
+- (void)initializeMoviePlayer
 {
     _moviePlayer = [[MPMoviePlayerController alloc] init];
     [_moviePlayer prepareToPlay];
@@ -69,27 +67,20 @@
     [self.movieView addSubview:_moviePlayer.view];
 }
 
-- (NSString *) getDocumentDirectory
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentDirectory = [paths objectAtIndex:0];
-    return documentDirectory;
-}
-
-- (void) playFirstMovie:(NSArray*) fileList fromDirectory: (NSString*) dirPath
+- (void)playFirstMovie:(NSArray *) fileList
 {
     for (NSString* file in fileList) {
         NSLog(@"++++++++++++++++++++++%@",file);
         if([file hasSuffix:@".m4v"])
         {
-            NSString* absolutePath = [NSString stringWithFormat:@"%@/%@",dirPath,file];
+            NSString* absolutePath = [NSString stringWithFormat:@"%@/%@",[FileUtil getDocumentDirectory],file];
             NSURL* fileURL = [[NSURL alloc] initFileURLWithPath:absolutePath];
             [self playMovie:fileURL];
         }
     }
 }
 
-- (void) playMovie:(NSURL*) movieURL
+- (void)playMovie:(NSURL*) movieURL
 {
     [_moviePlayer setContentURL:movieURL];
     [_moviePlayer play];

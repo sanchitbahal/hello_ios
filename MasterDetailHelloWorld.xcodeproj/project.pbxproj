@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		836FDE7215CA47BD0073A002 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836FDE6F15CA47A10073A002 /* MediaPlayer.framework */; };
+		836FDE7515CA4AD80073A002 /* FileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 836FDE7415CA4AD80073A002 /* FileUtil.m */; };
 		839EABBE15C9092F006DDF0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839EABBD15C9092F006DDF0C /* UIKit.framework */; };
 		839EABC015C9092F006DDF0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839EABBF15C9092F006DDF0C /* Foundation.framework */; };
 		839EABC215C9092F006DDF0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839EABC115C9092F006DDF0C /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		836FDE6F15CA47A10073A002 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		836FDE7315CA4AD80073A002 /* FileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtil.h; sourceTree = "<group>"; };
+		836FDE7415CA4AD80073A002 /* FileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileUtil.m; sourceTree = "<group>"; };
 		839EABB915C9092F006DDF0C /* MasterDetailHelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterDetailHelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839EABBD15C9092F006DDF0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		839EABBF15C9092F006DDF0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,6 +94,8 @@
 				839EABD315C9092F006DDF0C /* MasterViewController.m */,
 				839EABD515C9092F006DDF0C /* DetailViewController.h */,
 				839EABD615C9092F006DDF0C /* DetailViewController.m */,
+				836FDE7315CA4AD80073A002 /* FileUtil.h */,
+				836FDE7415CA4AD80073A002 /* FileUtil.m */,
 				839EABC415C9092F006DDF0C /* Supporting Files */,
 			);
 			path = MasterDetailHelloWorld;
@@ -174,6 +179,7 @@
 				839EABCE15C9092F006DDF0C /* AppDelegate.m in Sources */,
 				839EABD415C9092F006DDF0C /* MasterViewController.m in Sources */,
 				839EABD715C9092F006DDF0C /* DetailViewController.m in Sources */,
+				836FDE7515CA4AD80073A002 /* FileUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
