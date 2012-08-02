@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		836FDE7215CA47BD0073A002 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 836FDE6F15CA47A10073A002 /* MediaPlayer.framework */; };
 		839EABBE15C9092F006DDF0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839EABBD15C9092F006DDF0C /* UIKit.framework */; };
 		839EABC015C9092F006DDF0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839EABBF15C9092F006DDF0C /* Foundation.framework */; };
 		839EABC215C9092F006DDF0C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839EABC115C9092F006DDF0C /* CoreGraphics.framework */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		836FDE6F15CA47A10073A002 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		839EABB915C9092F006DDF0C /* MasterDetailHelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterDetailHelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839EABBD15C9092F006DDF0C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		839EABBF15C9092F006DDF0C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +46,7 @@
 				839EABBE15C9092F006DDF0C /* UIKit.framework in Frameworks */,
 				839EABC015C9092F006DDF0C /* Foundation.framework in Frameworks */,
 				839EABC215C9092F006DDF0C /* CoreGraphics.framework in Frameworks */,
+				836FDE7215CA47BD0073A002 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +73,7 @@
 		839EABBC15C9092F006DDF0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				836FDE6F15CA47A10073A002 /* MediaPlayer.framework */,
 				839EABBD15C9092F006DDF0C /* UIKit.framework */,
 				839EABBF15C9092F006DDF0C /* Foundation.framework */,
 				839EABC115C9092F006DDF0C /* CoreGraphics.framework */,
@@ -285,6 +289,7 @@
 				839EABDC15C9092F006DDF0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
