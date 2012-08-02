@@ -12,4 +12,5 @@
 @interface MediaPlayerViewController : UIViewController
 @property (nonatomic, retain) IBOutlet MPMoviePlayerController* moviePlayer;
 @property (nonatomic,retain) IBOutlet UIView *movieView; 
+- (MediaPlayerViewController*) initWithMoviePath:(NSString*) moviePath;
 @end

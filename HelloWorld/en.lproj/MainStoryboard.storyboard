@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D2001" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="A7q-86-rko">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D2001" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="12d-Vz-3Jh">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -57,6 +57,54 @@
             </objects>
             <point key="canvasLocation" x="208" y="87"/>
         </scene>
+        <!--Video List Controller - Root View Controller-->
+        <scene sceneID="y5O-zB-zlN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vjy-u9-qYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="bNg-sU-6Mc" customClass="VideoListController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WyQ-cu-qf9">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="iGT-2I-Fps">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bNg-sU-6Mc" id="Os6-4K-A6q"/>
+                            <outlet property="delegate" destination="Vjy-u9-qYq" id="VWd-ej-Xsk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="4Cl-nS-19q"/>
+                    <connections>
+                        <outlet property="myTableView" destination="WyQ-cu-qf9" id="XVM-lV-HXl"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="266" y="686"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CCv-ZV-HfS">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xve-Uz-abr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="12d-Vz-3Jh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="NI4-gu-5Dl">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bNg-sU-6Mc" kind="relationship" relationship="rootViewController" id="VBi-AD-R8t"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-199" y="426"/>
+        </scene>
         <!--Media Player View Controller-->
         <scene sceneID="lJt-z2-XB4">
             <objects>
@@ -75,6 +123,36 @@
             <point key="canvasLocation" x="634" y="87"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="HelloWorldViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HelloWorldViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changeGreeting:"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MPMoviePlayerController" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MPMoviePlayerController.h"/>
+        </class>
+        <class className="MediaPlayerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MediaPlayerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="moviePlayer" candidateClass="MPMoviePlayerController"/>
+                <relationship kind="outlet" name="movieView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="NSMutableArray" superclassName="NSArray">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSMutableArray.h"/>
+        </class>
+        <class className="VideoListController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoListController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dataSource" candidateClass="NSMutableArray"/>
+                <relationship kind="outlet" name="myTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -19,6 +19,11 @@
 		135BE6B615C65E3D00552A65 /* MediaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135BE6B515C65E3D00552A65 /* MediaPlayerViewController.m */; };
 		135BE6B815C6606D00552A65 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135BE6B715C6606D00552A65 /* MediaPlayer.framework */; };
 		135BE6B915C6607700552A65 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135BE6B715C6606D00552A65 /* MediaPlayer.framework */; };
+<<<<<<< HEAD
+=======
+		135BE6BF15C6A1C500552A65 /* sample.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 135BE6BE15C6A1C400552A65 /* sample.m4v */; };
+		135BE6CD15C7FAA000552A65 /* VideoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135BE6CC15C7FAA000552A65 /* VideoListController.m */; };
+>>>>>>> Added Navigation Controller but not working yet
 		83CCE8BF15BFD66C00D7D820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8BE15BFD66C00D7D820 /* UIKit.framework */; };
 		83CCE8C115BFD66C00D7D820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C015BFD66C00D7D820 /* Foundation.framework */; };
 		83CCE8C315BFD66C00D7D820 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C215BFD66C00D7D820 /* CoreGraphics.framework */; };
@@ -158,6 +163,8 @@
 				131FBB7815C2892800D9BB81 /* HelloWorld.m */,
 				135BE6B415C65E3D00552A65 /* MediaPlayerViewController.h */,
 				135BE6B515C65E3D00552A65 /* MediaPlayerViewController.m */,
+				135BE6CB15C7FAA000552A65 /* VideoListController.h */,
+				135BE6CC15C7FAA000552A65 /* VideoListController.m */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -295,6 +302,7 @@
 				83CCE8D515BFD66C00D7D820 /* HelloWorldViewController.m in Sources */,
 				131FBB7915C2892800D9BB81 /* HelloWorld.m in Sources */,
 				135BE6B615C65E3D00552A65 /* MediaPlayerViewController.m in Sources */,
+				135BE6CD15C7FAA000552A65 /* VideoListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
