@@ -13,6 +13,6 @@
 
 @property (strong, nonatomic) id detailItem;
 
-@property (nonatomic, retain) IBOutlet MPMoviePlayerController* moviePlayer;
+@property (nonatomic, retain) IBOutlet MPMoviePlayerController *moviePlayer;
 @property (strong, nonatomic) IBOutlet UIView *movieView;
 @end

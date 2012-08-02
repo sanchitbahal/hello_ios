@@ -46,15 +46,33 @@
 - (void)initializeMoviePlayer
 {
     _moviePlayer = [[MPMoviePlayerController alloc] init];
-    [_moviePlayer prepareToPlay];
-    [_moviePlayer.view setFrame:self.view.bounds];
+    [_moviePlayer  prepareToPlay];
     [self.movieView addSubview:_moviePlayer.view];
+    [_moviePlayer setControlStyle:MPMovieControlStyleFullscreen];
+    //_moviePlayer.view.transform = CGAffineTransformConcat(_moviePlayer.view.transform, CGAffineTransformMakeRotation(M_PI_2));
+    UIWindow *backgroundWindow = [[UIApplication sharedApplication] keyWindow];
+    [_moviePlayer.view setFrame:backgroundWindow.frame];
+    [backgroundWindow addSubview:_moviePlayer.view];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MPMoviePlayerDidExitFullscreen:) name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
 }
 
 - (void)playMovie:(NSURL*) movieURL
 {
     [_moviePlayer setContentURL:movieURL];
     [_moviePlayer play];
+}
+
+- (void)MPMoviePlayerDidExitFullscreen:(NSNotification *)notification
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+                                                  object:nil];
+    
+    [_moviePlayer stop];
+    [_moviePlayer.view removeFromSuperview];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
