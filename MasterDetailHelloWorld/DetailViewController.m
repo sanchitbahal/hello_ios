@@ -9,10 +9,6 @@
 #import "DetailViewController.h"
 #import "FileUtil.h"
 
-@interface DetailViewController ()
-- (void)configureView;
-@end
-
 @implementation DetailViewController
 
 #pragma mark - Managing the detail item
@@ -22,29 +18,17 @@
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
-}
-
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
     }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
 
     [self initializeMoviePlayer];
-    [self playFirstMovie:[FileUtil getFileList]];
+    NSString *absolutePath = [NSString stringWithFormat:@"%@/%@",[FileUtil getDocumentDirectory], self.detailItem];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:absolutePath];
+    [self playMovie:fileURL];
 }
 
 - (void)viewDidUnload
@@ -65,19 +49,6 @@
     [_moviePlayer prepareToPlay];
     [_moviePlayer.view setFrame:self.view.bounds];
     [self.movieView addSubview:_moviePlayer.view];
-}
-
-- (void)playFirstMovie:(NSArray *) fileList
-{
-    for (NSString* file in fileList) {
-        NSLog(@"++++++++++++++++++++++%@",file);
-        if([file hasSuffix:@".m4v"])
-        {
-            NSString* absolutePath = [NSString stringWithFormat:@"%@/%@",[FileUtil getDocumentDirectory],file];
-            NSURL* fileURL = [[NSURL alloc] initFileURLWithPath:absolutePath];
-            [self playMovie:fileURL];
-        }
-    }
 }
 
 - (void)playMovie:(NSURL*) movieURL
