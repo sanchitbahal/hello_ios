@@ -14,18 +14,10 @@
     - (void) playFirstMovie:(NSArray*) fileList fromDirectory: (NSString*) dirPath;
     - (void) playMovie:(NSURL*) movieURL;
     - (void) writeToFile;
-    @property(nonatomic,retain) NSURL* movieURL;
-
 @end
 
 @implementation MediaPlayerViewController
-    @synthesize movieView, moviePlayer, movieURL;
-    
-    - (MediaPlayerViewController*) initWithMoviePath:(NSString*) moviePath
-    {
-        movieURL = [[NSURL alloc] initFileURLWithPath:moviePath];
-        return self;
-    }
+    @synthesize movieView, moviePlayer;
 
     - (void) initializeMoviePlayer
     {
@@ -35,28 +27,6 @@
         [self.movieView addSubview:moviePlayer.view];
     }
 
-    
-
-    - (void) playMovie
-    {
-        [moviePlayer setContentURL: movieURL];
-        [moviePlayer play];     
-    }
-
-    - (void) viewDidLoad
-    {
-        [self initializeMoviePlayer];
-        [self playMovie];
-    }
-
-    - (void) viewDidUnload
-    {
-        [super viewDidUnload];
-    }
-
-
-
-/*******************Ununsed code but kept for later use*********************/
     - (NSString*) getDocumentDirectory
     {
         NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -78,6 +48,27 @@
     }
 
 
+    - (void) playMovie:(NSURL*) movieURL
+    {
+        [moviePlayer setContentURL:movieURL];
+        [moviePlayer play];     
+    }
+
+    - (void) viewDidLoad
+    {
+        NSFileManager* fm = [NSFileManager defaultManager];
+        NSString* documentDirectory = [self getDocumentDirectory];
+        NSArray* files = [fm contentsOfDirectoryAtPath:documentDirectory error:NULL];
+        [self initializeMoviePlayer];
+        [self playFirstMovie:files fromDirectory:documentDirectory];
+    }
+
+    - (void) viewDidUnload
+    {
+        [super viewDidUnload];
+    }
+
+
     - (void) writeToFile 
     {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -89,8 +80,5 @@
         //save content to the documents directory
         [content writeToFile:fileName atomically:NO encoding:NSStringEncodingConversionAllowLossy error:nil];
         NSLog(@"************************%@",documentsDirectory);    
-    
-        
     }
-
 @end

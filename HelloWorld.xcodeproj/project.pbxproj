@@ -19,11 +19,8 @@
 		135BE6B615C65E3D00552A65 /* MediaPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135BE6B515C65E3D00552A65 /* MediaPlayerViewController.m */; };
 		135BE6B815C6606D00552A65 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135BE6B715C6606D00552A65 /* MediaPlayer.framework */; };
 		135BE6B915C6607700552A65 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 135BE6B715C6606D00552A65 /* MediaPlayer.framework */; };
-<<<<<<< HEAD
-=======
-		135BE6BF15C6A1C500552A65 /* sample.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 135BE6BE15C6A1C400552A65 /* sample.m4v */; };
+
 		135BE6CD15C7FAA000552A65 /* VideoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135BE6CC15C7FAA000552A65 /* VideoListController.m */; };
->>>>>>> Added Navigation Controller but not working yet
 		83CCE8BF15BFD66C00D7D820 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8BE15BFD66C00D7D820 /* UIKit.framework */; };
 		83CCE8C115BFD66C00D7D820 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C015BFD66C00D7D820 /* Foundation.framework */; };
 		83CCE8C315BFD66C00D7D820 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CCE8C215BFD66C00D7D820 /* CoreGraphics.framework */; };
@@ -46,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		131FBAD115C1709000D9BB81 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
-		131FBB5115C26D9E00D9BB81 /* tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		131FBB5115C26D9E00D9BB81 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		131FBB5815C26D9F00D9BB81 /* tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tests-Info.plist"; sourceTree = "<group>"; };
 		131FBB5A15C26D9F00D9BB81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		131FBB5C15C26D9F00D9BB81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,6 +54,7 @@
 		135BE6B415C65E3D00552A65 /* MediaPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlayerViewController.h; sourceTree = "<group>"; };
 		135BE6B515C65E3D00552A65 /* MediaPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaPlayerViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		135BE6B715C6606D00552A65 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		135BE6BE15C6A1C400552A65 /* sample.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.m4v; sourceTree = "<group>"; };
 		83CCE8BA15BFD66C00D7D820 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CCE8BE15BFD66C00D7D820 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		83CCE8C015BFD66C00D7D820 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -133,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				83CCE8BA15BFD66C00D7D820 /* HelloWorld.app */,
-				131FBB5115C26D9E00D9BB81 /* tests.app */,
+				131FBB5115C26D9E00D9BB81 /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,8 +161,6 @@
 				131FBB7815C2892800D9BB81 /* HelloWorld.m */,
 				135BE6B415C65E3D00552A65 /* MediaPlayerViewController.h */,
 				135BE6B515C65E3D00552A65 /* MediaPlayerViewController.m */,
-				135BE6CB15C7FAA000552A65 /* VideoListController.h */,
-				135BE6CC15C7FAA000552A65 /* VideoListController.m */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -199,7 +195,7 @@
 			);
 			name = tests;
 			productName = tests;
-			productReference = 131FBB5115C26D9E00D9BB81 /* tests.app */;
+			productReference = 131FBB5115C26D9E00D9BB81 /* Tests.app */;
 			productType = "com.apple.product-type.application";
 		};
 		83CCE8B915BFD66C00D7D820 /* HelloWorld */ = {
@@ -302,7 +298,6 @@
 				83CCE8D515BFD66C00D7D820 /* HelloWorldViewController.m in Sources */,
 				131FBB7915C2892800D9BB81 /* HelloWorld.m in Sources */,
 				135BE6B615C65E3D00552A65 /* MediaPlayerViewController.m in Sources */,
-				135BE6CD15C7FAA000552A65 /* VideoListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
