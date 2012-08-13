@@ -18,6 +18,8 @@
 		839EABD115C9092F006DDF0C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839EABCF15C9092F006DDF0C /* MainStoryboard.storyboard */; };
 		839EABD415C9092F006DDF0C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839EABD315C9092F006DDF0C /* MasterViewController.m */; };
 		839EABD715C9092F006DDF0C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839EABD615C9092F006DDF0C /* DetailViewController.m */; };
+		83AE4C4315D139CE00B0006E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83AE4C4015D139A700B0006E /* StoreKit.framework */; };
+		83F6343015D7E9D10084E67A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83F6342F15D7E9D10084E67A /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		839EABD315C9092F006DDF0C /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		839EABD515C9092F006DDF0C /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		839EABD615C9092F006DDF0C /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		83AE4C4015D139A700B0006E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		83F6342F15D7E9D10084E67A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 				839EABC015C9092F006DDF0C /* Foundation.framework in Frameworks */,
 				839EABC215C9092F006DDF0C /* CoreGraphics.framework in Frameworks */,
 				836FDE7215CA47BD0073A002 /* MediaPlayer.framework in Frameworks */,
+				83AE4C4315D139CE00B0006E /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +64,7 @@
 		839EABAE15C9092F006DDF0C = {
 			isa = PBXGroup;
 			children = (
+				83F6342F15D7E9D10084E67A /* Settings.bundle */,
 				839EABC315C9092F006DDF0C /* MasterDetailHelloWorld */,
 				839EABBC15C9092F006DDF0C /* Frameworks */,
 				839EABBA15C9092F006DDF0C /* Products */,
@@ -76,6 +82,7 @@
 		839EABBC15C9092F006DDF0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83AE4C4015D139A700B0006E /* StoreKit.framework */,
 				836FDE6F15CA47A10073A002 /* MediaPlayer.framework */,
 				839EABBD15C9092F006DDF0C /* UIKit.framework */,
 				839EABBF15C9092F006DDF0C /* Foundation.framework */,
@@ -165,6 +172,7 @@
 			files = (
 				839EABC815C9092F006DDF0C /* InfoPlist.strings in Resources */,
 				839EABD115C9092F006DDF0C /* MainStoryboard.storyboard in Resources */,
+				83F6343015D7E9D10084E67A /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +236,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -249,7 +259,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
