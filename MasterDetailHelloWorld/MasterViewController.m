@@ -36,6 +36,16 @@
     for (NSString *file in [FileUtil getFileList]) {
         [_objects insertObject:file atIndex:0];
     }
+    
+    // Load the settings; Currently it does not do anything with the loaded settings.
+    [self loadSettings];
+}
+
+- (void)loadSettings
+{
+    NSUserDefaults *settings = [NSUserDefaults standardUserDefaults];
+    NSString *fileFormat = [settings stringForKey:@"fileFormat"];
+    NSLog(@"File Format: %@", fileFormat);
 }
 
 - (void)viewDidUnload
