@@ -15,6 +15,7 @@
 @implementation ViewController
 @synthesize scannedImage;
 @synthesize scannedText;
+@synthesize popoverController;
 
 - (void)viewDidLoad
 {
@@ -39,21 +40,26 @@
     }
 }
 
-- (IBAction)scanButtonTapped
+- (IBAction)scanButtonTapped:(id)sender
 {
     // URL to generate QR Code
     //https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=Hello%20World
     NSLog(@"Scan button tapped.");
     
-    ZBarReaderController *reader = [ZBarReaderController new];
+    ZBarReaderViewController *reader = [ZBarReaderViewController new];
     reader.readerDelegate = self;
-    //reader.supportedOrientationsMask = ZBarOrientationMaskAll;
-    reader.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+    reader.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     ZBarImageScanner *scanner = reader.scanner;
     [scanner setSymbology: ZBAR_I25 config:ZBAR_CFG_ENABLE to:0];
     
-    [self presentModalViewController:reader animated:YES];
+    // For iPhone
+    // [self presentingModalViewController:reader animated:YES];
+    
+    // For iPad
+    popoverController = [[UIPopoverController alloc] initWithContentViewController:reader];
+    [popoverController presentPopoverFromRect:[sender bounds] inView:scannedText permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -72,7 +78,7 @@
     scannedImage.image = [info objectForKey: UIImagePickerControllerOriginalImage];
     
     // ADD: dismiss the controller (NB dismiss from the *reader*!)
-    [picker dismissModalViewControllerAnimated: YES];
+    [picker removeFromParentViewController];
 }
 
 @end

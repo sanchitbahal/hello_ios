@@ -23,6 +23,9 @@
 		83F6351815D8FAD10084E67A /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 83F6351315D8FAD10084E67A /* zbar-samples.png */; };
 		83F6352615D911D20084E67A /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F6352515D911D20084E67A /* libiconv.dylib */; };
 		83F6352715D9238A0084E67A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F6352015D9116F0084E67A /* QuartzCore.framework */; };
+		83F6352A15DA26D30084E67A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F6352815DA26BD0084E67A /* CoreVideo.framework */; };
+		83F6352E15DA26FC0084E67A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F6352B15DA26DF0084E67A /* AVFoundation.framework */; };
+		83F6353015DA27140084E67A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F6352F15DA27140084E67A /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,9 @@
 		83F6351315D8FAD10084E67A /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
 		83F6352015D9116F0084E67A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		83F6352515D911D20084E67A /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		83F6352815DA26BD0084E67A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		83F6352B15DA26DF0084E67A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		83F6352F15DA27140084E67A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,9 @@
 				83F634D715D8FAB80084E67A /* UIKit.framework in Frameworks */,
 				83F634D915D8FAB80084E67A /* Foundation.framework in Frameworks */,
 				83F634DB15D8FAB80084E67A /* CoreGraphics.framework in Frameworks */,
+				83F6352E15DA26FC0084E67A /* AVFoundation.framework in Frameworks */,
+				83F6353015DA27140084E67A /* CoreMedia.framework in Frameworks */,
+				83F6352A15DA26D30084E67A /* CoreVideo.framework in Frameworks */,
 				83F6352715D9238A0084E67A /* QuartzCore.framework in Frameworks */,
 				83F6351415D8FAD10084E67A /* libzbar.a in Frameworks */,
 				83F6352615D911D20084E67A /* libiconv.dylib in Frameworks */,
@@ -108,6 +117,9 @@
 		83F634D515D8FAB80084E67A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83F6352F15DA27140084E67A /* CoreMedia.framework */,
+				83F6352B15DA26DF0084E67A /* AVFoundation.framework */,
+				83F6352815DA26BD0084E67A /* CoreVideo.framework */,
 				83F6352015D9116F0084E67A /* QuartzCore.framework */,
 				83F634D615D8FAB80084E67A /* UIKit.framework */,
 				83F634D815D8FAB80084E67A /* Foundation.framework */,

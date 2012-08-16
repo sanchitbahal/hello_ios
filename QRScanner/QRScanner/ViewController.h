@@ -12,7 +12,8 @@
 
 @property (nonatomic, retain) IBOutlet UIImageView *scannedImage;
 @property (nonatomic, retain) IBOutlet UITextView *scannedText;
+@property (nonatomic, retain) UIPopoverController *popoverController;
 
-- (IBAction)scanButtonTapped;
+- (IBAction)scanButtonTapped:(id)sender;
 
 @end
